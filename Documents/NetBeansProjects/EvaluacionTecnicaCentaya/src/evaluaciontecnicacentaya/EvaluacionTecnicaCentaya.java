@@ -27,14 +27,15 @@ public class EvaluacionTecnicaCentaya  {
     double divicion;
     String dato;  
     char operacion ;
-            
-    do{
+    boolean op = true;        
+    
+  
        
         try{
             
-        num1 =Integer.parseInt(JOptionPane.showInputDialog("Captura el primer número"));
-        num2 =Integer.parseInt(JOptionPane.showInputDialog("Captura el segundo número"));
-          dato = JOptionPane.showInputDialog("Dijite una operacion  \n "  + "\n *" + "\n /" +"\n +"+"\n-" );
+        num1 = Integer.parseInt(JOptionPane.showInputDialog("Captura el primer numero"));
+        num2 = Integer.parseInt(JOptionPane.showInputDialog("Captura el segundo numero"));
+        dato = JOptionPane.showInputDialog("Dijite una operacion  \n "  + "\n *" + "\n /" +"\n +"+"\n-" );
         
         operacion= dato.charAt(0);
        
@@ -52,6 +53,7 @@ public class EvaluacionTecnicaCentaya  {
             
             case'*': multiplicacion = num1 * num2;
             JOptionPane.showMessageDialog(null,multiplicacion,miMensaje.mensaje_m,JOptionPane.INFORMATION_MESSAGE);
+            
             break;
             
             case'/': 
@@ -61,19 +63,19 @@ public class EvaluacionTecnicaCentaya  {
             divicion = num1 / num2;
             JOptionPane.showMessageDialog(null,divicion,miMensaje.mensaje_d,JOptionPane.INFORMATION_MESSAGE);
             }
- 
             break;
-
+            
+            default:
+            JOptionPane.showMessageDialog(null, "Ingrese una operacion valida \n "  + "\n *" + "\n /" +"\n +"+"\n-");
+        
         }// final swtch
        
         }catch(NumberFormatException ex){
            
         JOptionPane.showMessageDialog(null, "Ingrese valores validos");
-       
         }
-                break;
+               
         
-        }while (operacion !=0);
-       
+   
     }
 }// finla de Evaluacion tecnica
