@@ -15,8 +15,8 @@ String mensaje_s;
 String mensaje_r;
 String mensaje_m;
 String mensaje_d;
-String mensaje_e;
-String mensaje_error_suma;
+//String num1;
+//String num2;
 
 //constructor 
 public Mensajes(String mensaje_s, String mensaje_r,String mensaje_m,String mensaje_d ){
@@ -27,12 +27,8 @@ public Mensajes(String mensaje_s, String mensaje_r,String mensaje_m,String mensa
     this.mensaje_d = mensaje_d;
     
     
+    
 }    
-public Mensajes(String mensaje_e, String mensaje_erro_suma ){
-
-    this.mensaje_e = mensaje_e; 
-    this.mensaje_error_suma=mensaje_erro_suma;
-}   
 
 
 

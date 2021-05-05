@@ -30,8 +30,11 @@ public class EvaluacionTecnicaCentaya  {
     boolean op = true;        
     
   
-       
+   
+    do{     
+        
         try{
+        
             
         num1 = Integer.parseInt(JOptionPane.showInputDialog("Captura el primer numero"));
         num2 = Integer.parseInt(JOptionPane.showInputDialog("Captura el segundo numero"));
@@ -68,14 +71,15 @@ public class EvaluacionTecnicaCentaya  {
             default:
             JOptionPane.showMessageDialog(null, "Ingrese una operacion valida \n "  + "\n *" + "\n /" +"\n +"+"\n-");
         
-        }// final swtch
-       
-        }catch(NumberFormatException ex){
-           
-        JOptionPane.showMessageDialog(null, "Ingrese valores validos");
-        }
-               
-        
+              }// final swtch
+              
+            }catch(NumberFormatException ex){
+                JOptionPane.showMessageDialog(null, "Ingrese valores validos");
+            }
+    
+    
+    } while(op); // final de whhile
+    
+ }   
    
-    }
 }// finla de Evaluacion tecnica
